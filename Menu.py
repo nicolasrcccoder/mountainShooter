@@ -15,6 +15,8 @@ class Menu:
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self):
+      pygame.mixer_music.load('./asset/menu.mp3')
+      pygame.mixer_music.play(-1)
       while True:
         self.window.blit(source=self.surf, dest=self.rect)
         self.menu_text(50,"Mountain", (COLOR_ORANGE), ((WIN_WIDTH / 2),70))
